@@ -1,0 +1,23 @@
+﻿<Window x:Class="TwoD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TwoD" xmlns:wpf="clr-namespace:SharpGL.WPF;assembly=SharpGL.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
+    <Grid>
+        <DockPanel>
+            <ToolBarPanel DockPanel.Dock="Top">
+                <ToolBar>
+                    <Button Content="Randomise!" Click="Button_Click" />
+                </ToolBar>
+            </ToolBarPanel>
+            <wpf:OpenGLControl Name="openGLControl1" 
+                               OpenGLDraw="openGLControl1_OpenGLDraw" 
+                               Resized="openGLControl1_Resized" 
+                               OpenGLInitialized="openGLControl1_OpenGLInitialized"
+                               DrawFPS="True"/>
+        </DockPanel>
+    </Grid>
+</Window>
